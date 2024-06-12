@@ -1,0 +1,1 @@
+AutoID, ItemCode, ItemName, UOM, CostPrice, SellPrice, RcvQty, SaleQty, DmgQty, RtnQty, BalanceQty, PisicalQty, LastUpdate, UName, DscPrice

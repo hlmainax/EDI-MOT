@@ -1,0 +1,166 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EDIRI-MOT
+</name>
+</assembly>
+<members>
+<member name="T:POS_System.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.back">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.back1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.back2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.bck">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.Button_Cancel_icon1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.Logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.NewSlide">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.right_wrong_10664423">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.SlideNew">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.Softlabpos_Logo_13">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.Supermarket_trolley_fille_014">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.Supermarket_trolley_fille_0141">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.Untitled_111">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.user_lock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.Warning">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:POS_System.My.Resources.Resources.wwwrong_10664423">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:POS_System.DataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:POS_System.DataSet1.TblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:POS_System.DataSet1.TblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:POS_System.DataSet1.TblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:POS_System.DataSet2">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:POS_System.DataSet2.TblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:POS_System.DataSet2.TblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:POS_System.DataSet2.TblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:POS_System.DataSet3">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:POS_System.DataSet3.TblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:POS_System.DataSet3.TblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:POS_System.DataSet3.TblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+</members>
+</doc>

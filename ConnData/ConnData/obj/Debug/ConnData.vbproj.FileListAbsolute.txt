@@ -1,0 +1,77 @@
+D:\DrPhone Solution\ConnData\ConnData\bin\Debug\ConnData.dll
+D:\DrPhone Solution\ConnData\ConnData\bin\Debug\ConnData.pdb
+D:\DrPhone Solution\ConnData\ConnData\bin\Debug\ConnData.xml
+D:\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.Resources.resources
+D:\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.vbproj.GenerateResource.Cache
+D:\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.dll
+D:\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.xml
+D:\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.pdb
+F:\DrPhone Solution\ConnData\ConnData\bin\Debug\ConnData.dll
+F:\DrPhone Solution\ConnData\ConnData\bin\Debug\ConnData.pdb
+F:\DrPhone Solution\ConnData\ConnData\bin\Debug\ConnData.xml
+F:\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.Resources.resources
+F:\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.vbproj.GenerateResource.Cache
+F:\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.dll
+F:\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.xml
+F:\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.pdb
+D:\Softwares\Projects\DrPhone Solution\ConnData\ConnData\bin\Debug\ConnData.dll
+D:\Softwares\Projects\DrPhone Solution\ConnData\ConnData\bin\Debug\ConnData.pdb
+D:\Softwares\Projects\DrPhone Solution\ConnData\ConnData\bin\Debug\ConnData.xml
+D:\Softwares\Projects\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.Resources.resources
+D:\Softwares\Projects\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.vbproj.GenerateResource.Cache
+D:\Softwares\Projects\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.dll
+D:\Softwares\Projects\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.xml
+D:\Softwares\Projects\DrPhone Solution\ConnData\ConnData\obj\Debug\ConnData.pdb
+D:\Priyangi Furnitures\ConnData\ConnData\bin\Debug\ConnData.dll
+D:\Priyangi Furnitures\ConnData\ConnData\bin\Debug\ConnData.pdb
+D:\Priyangi Furnitures\ConnData\ConnData\bin\Debug\ConnData.xml
+D:\Priyangi Furnitures\ConnData\ConnData\obj\Debug\ConnData.Resources.resources
+D:\Priyangi Furnitures\ConnData\ConnData\obj\Debug\ConnData.vbproj.GenerateResource.Cache
+D:\Priyangi Furnitures\ConnData\ConnData\obj\Debug\ConnData.dll
+D:\Priyangi Furnitures\ConnData\ConnData\obj\Debug\ConnData.xml
+D:\Priyangi Furnitures\ConnData\ConnData\obj\Debug\ConnData.pdb
+D:\Sotware Projects\Priyangi Furnitures\ConnData\ConnData\bin\Debug\ConnData.dll
+D:\Sotware Projects\Priyangi Furnitures\ConnData\ConnData\bin\Debug\ConnData.pdb
+D:\Sotware Projects\Priyangi Furnitures\ConnData\ConnData\bin\Debug\ConnData.xml
+D:\Sotware Projects\Priyangi Furnitures\ConnData\ConnData\obj\Debug\ConnData.Resources.resources
+D:\Sotware Projects\Priyangi Furnitures\ConnData\ConnData\obj\Debug\ConnData.vbproj.GenerateResource.Cache
+D:\Sotware Projects\Priyangi Furnitures\ConnData\ConnData\obj\Debug\ConnData.dll
+D:\Sotware Projects\Priyangi Furnitures\ConnData\ConnData\obj\Debug\ConnData.xml
+D:\Sotware Projects\Priyangi Furnitures\ConnData\ConnData\obj\Debug\ConnData.pdb
+E:\Sotware Projects\wwww\ConnData\ConnData\bin\Debug\ConnData.dll
+E:\Sotware Projects\wwww\ConnData\ConnData\bin\Debug\ConnData.pdb
+E:\Sotware Projects\wwww\ConnData\ConnData\bin\Debug\ConnData.xml
+E:\Sotware Projects\wwww\ConnData\ConnData\obj\Debug\ConnData.Resources.resources
+E:\Sotware Projects\wwww\ConnData\ConnData\obj\Debug\ConnData.vbproj.GenerateResource.Cache
+E:\Sotware Projects\wwww\ConnData\ConnData\obj\Debug\ConnData.dll
+E:\Sotware Projects\wwww\ConnData\ConnData\obj\Debug\ConnData.xml
+E:\Sotware Projects\wwww\ConnData\ConnData\obj\Debug\ConnData.pdb
+D:\Sfts\Sotware Projects\Hameed Mard\HameedMart\ConnData\ConnData\bin\Debug\ConnData.dll
+D:\Sfts\Sotware Projects\Hameed Mard\HameedMart\ConnData\ConnData\bin\Debug\ConnData.pdb
+D:\Sfts\Sotware Projects\Hameed Mard\HameedMart\ConnData\ConnData\bin\Debug\ConnData.xml
+D:\Sfts\Sotware Projects\Hameed Mard\HameedMart\ConnData\ConnData\obj\Debug\ConnData.vbprojAssemblyReference.cache
+D:\Sfts\Sotware Projects\Hameed Mard\HameedMart\ConnData\ConnData\obj\Debug\ConnData.Resources.resources
+D:\Sfts\Sotware Projects\Hameed Mard\HameedMart\ConnData\ConnData\obj\Debug\ConnData.vbproj.GenerateResource.cache
+D:\Sfts\Sotware Projects\Hameed Mard\HameedMart\ConnData\ConnData\obj\Debug\ConnData.vbproj.CoreCompileInputs.cache
+D:\Sfts\Sotware Projects\Hameed Mard\HameedMart\ConnData\ConnData\obj\Debug\ConnData.dll
+D:\Sfts\Sotware Projects\Hameed Mard\HameedMart\ConnData\ConnData\obj\Debug\ConnData.xml
+D:\Sfts\Sotware Projects\Hameed Mard\HameedMart\ConnData\ConnData\obj\Debug\ConnData.pdb
+C:\Users\acer\Downloads\KRISTAL-LANKA-master\ConnData\ConnData\bin\Debug\ConnData.dll
+C:\Users\acer\Downloads\KRISTAL-LANKA-master\ConnData\ConnData\bin\Debug\ConnData.pdb
+C:\Users\acer\Downloads\KRISTAL-LANKA-master\ConnData\ConnData\bin\Debug\ConnData.xml
+C:\Users\acer\Downloads\KRISTAL-LANKA-master\ConnData\ConnData\obj\Debug\ConnData.Resources.resources
+C:\Users\acer\Downloads\KRISTAL-LANKA-master\ConnData\ConnData\obj\Debug\ConnData.vbproj.GenerateResource.cache
+C:\Users\acer\Downloads\KRISTAL-LANKA-master\ConnData\ConnData\obj\Debug\ConnData.vbproj.CoreCompileInputs.cache
+C:\Users\acer\Downloads\KRISTAL-LANKA-master\ConnData\ConnData\obj\Debug\ConnData.dll
+C:\Users\acer\Downloads\KRISTAL-LANKA-master\ConnData\ConnData\obj\Debug\ConnData.xml
+C:\Users\acer\Downloads\KRISTAL-LANKA-master\ConnData\ConnData\obj\Debug\ConnData.pdb
+C:\Git-Soft\EDIRI-MOT\ConnData\ConnData\bin\Debug\ConnData.dll
+C:\Git-Soft\EDIRI-MOT\ConnData\ConnData\bin\Debug\ConnData.pdb
+C:\Git-Soft\EDIRI-MOT\ConnData\ConnData\bin\Debug\ConnData.xml
+C:\Git-Soft\EDIRI-MOT\ConnData\ConnData\obj\Debug\ConnData.vbproj.AssemblyReference.cache
+C:\Git-Soft\EDIRI-MOT\ConnData\ConnData\obj\Debug\ConnData.Resources.resources
+C:\Git-Soft\EDIRI-MOT\ConnData\ConnData\obj\Debug\ConnData.vbproj.GenerateResource.cache
+C:\Git-Soft\EDIRI-MOT\ConnData\ConnData\obj\Debug\ConnData.vbproj.CoreCompileInputs.cache
+C:\Git-Soft\EDIRI-MOT\ConnData\ConnData\obj\Debug\ConnData.dll
+C:\Git-Soft\EDIRI-MOT\ConnData\ConnData\obj\Debug\ConnData.xml
+C:\Git-Soft\EDIRI-MOT\ConnData\ConnData\obj\Debug\ConnData.pdb
