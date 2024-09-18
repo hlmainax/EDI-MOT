@@ -185,7 +185,7 @@ Public Class FrmMDI
 
         'D:\Dropbox
         'Dim path As String = "C:\Users\acer-pc\Dropbox\My PC (acer-pc)\Documents\" & xx1
-        Dim path As String = "D:\Dropbox\" & xx1
+        Dim path As String = "C:\123\" & xx1
         '  path = System.IO.Path.GetFullPath(SaveFileDialog1.FileName)
         '   path = SaveFileDialog1.InitialDirectory(SaveFileDialog1.FileName)
 
@@ -196,7 +196,7 @@ Public Class FrmMDI
             'Backup In progress...
             'Timer1.Start()
 
-            cmd = New SqlCommand("USE master; BACKUP DATABASE Kristal_Lanka TO DISK = '" & path.ToString & "'", con)
+            cmd = New SqlCommand("USE master; BACKUP DATABASE Ediri TO DISK = '" & path.ToString & "'", con)
             ' cmd = New SqlCommand(" BACKUP DATABASE POS_System TO DISK = '" & path.ToString & "'", con)
             'con.Open()
             cmd.ExecuteNonQuery()

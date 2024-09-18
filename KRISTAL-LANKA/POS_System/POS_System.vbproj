@@ -16,7 +16,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>C:\Users\lenovo\Desktop\Edi3.9\</PublishUrl>
+    <PublishUrl>C:\Users\lenovo\Desktop\Edi5.4\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -32,7 +32,7 @@
     <SuiteName>CITYMOBILE</SuiteName>
     <MinimumRequiredVersion>1.0.0.3</MinimumRequiredVersion>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>609</ApplicationRevision>
+    <ApplicationRevision>624</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -691,6 +691,18 @@
       <DependentUpon>RptCode1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RptCrd.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptCrd.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptDayAll.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptDayAll.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RptItem.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -707,6 +719,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptSalesEmp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptSls.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSls.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptStk.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStk.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="RptStkAdjusted.vb">
@@ -1057,6 +1081,14 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCode1.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="RptCrd.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptCrd.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDayAll.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptDayAll.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="RptItem.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptItem.vb</LastGenOutput>
@@ -1068,6 +1100,14 @@
     <EmbeddedResource Include="RptSalesEmp.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptSalesEmp.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptSls.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSls.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptStk.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptStk.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RptStkAdjusted.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

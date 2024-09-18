@@ -865,7 +865,8 @@ Public Class FrmCash1
             If ItemCode.Text = "" Then
                 ' Discnt.Focus()
             Else
-                xITM(ItemCode.Text)
+                Dim itCode As String = ItemCode.Text.Trim
+                xITM(itCode)
                 'ListBox1.Hide()
                 gridItmList.Hide()
             End If
@@ -978,6 +979,7 @@ Public Class FrmCash1
             FrmRCPT.BringToFront()
         ElseIf e.KeyCode = 113 Then
             Panel6.Show()
+            Panel6.BringToFront()
             Panel1.Enabled = False
             txtCsCode_TextChanged(sender, EventArgs.Empty)
             txtCsCode.Focus()
@@ -999,42 +1001,15 @@ Public Class FrmCash1
         End If
     End Sub
     Private Sub xCUST(ByVal xCCODE As String)
-        cmd = New SqlCommand("select * from Cus_Master where(CusCode='" & xCCODE & "')", con)
+        cmd = New SqlCommand("select CCode,CusName from Cst where(CCode='" & xCCODE & "')", con)
         rdr = cmd.ExecuteReader
         If rdr.Read = True Then
-            If rdr("Active") = 1 Then
-                CusCode.Text = rdr("CusCode").ToString
-                CusName.Text = rdr("CusName").ToString
-                CusBalance.Text = rdr("CusBalance").ToString
-                CusBalance.Text = Format(Val(CusBalance.Text), "0.00")
-                txtTotalCr.Text = Format(Val(CusBalance.Text), "0.00")
-                CrdtLmt.Text = rdr("CusCreditLimit")
-                CrdtLmt.Text = Format(Val(CrdtLmt.Text), "0.00")
-                If Val(CrdtLmt.Text) > 0 Then
-                    CanGv.Text = rdr("CusCreditLimit") - rdr("CusBalance")
-                    CanGv.Text = Format(Val(CanGv.Text), "0.00")
-                Else
-                End If
-            Else
-                cmd1 = New SqlCommand("Update Cus_Master set Active='" & 1 & "'where CusCode='" & xCCODE & "'", con1)
-                cmd1.ExecuteNonQuery()
-                cmd1 = New SqlCommand("select * from Cus_Master where(CusCode='" & xCCODE & "')", con1)
-                rdr1 = cmd1.ExecuteReader
-                If rdr1.Read = True Then
-                    CusCode.Text = rdr1("CusCode").ToString
-                    CusName.Text = rdr1("CusName").ToString
-                    CusBalance.Text = rdr1("CusBalance").ToString
-                    CusBalance.Text = Format(Val(CusBalance.Text), "0.00")
-                    CrdtLmt.Text = rdr1("CusCreditLimit")
-                    CrdtLmt.Text = Format(Val(CrdtLmt.Text), "0.00")
-                    If Val(CrdtLmt.Text) > 0 Then
-                        CanGv.Text = rdr("CusCreditLimit") - rdr("CusBalance")
-                        CanGv.Text = Format(Val(CanGv.Text), "0.00")
-                    Else
-                    End If
-                End If
-                rdr1.Close()
-            End If
+            CusCode.Text = rdr("CCode").ToString
+            CusName.Text = rdr("CusName").ToString
+            Dim cba As Double = 0
+            cmd1 = New SqlCommand("Select ISNULL(Sum(Cr-Dr),0) from Cled where CCode='" & rdr("CCode") & "'and sts=0", con1)
+            cba = cmd1.ExecuteScalar
+            CusBalance.Text = Format(cba, "0.00")
         End If
         rdr.Close()
     End Sub
@@ -1228,7 +1203,15 @@ Public Class FrmCash1
         GRID4.Rows.Clear()
         GRID4.Hide()
         Dim cnt As Integer = 0
-        cmd = New SqlCommand("Select Count(DISTINCT CPrice) from Itr where Qty>0 and Sts=0 and ItemCode='" & xITC & "'and NOT Tno like '%" & "UAI" & "%'", con)
+        Dim ssq As String = "SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT CPrice, SellPrice
+    FROM Itr where Qty>0 and Sts=0 and ItemCode='" & xITC & "'and NOT Tno like '%" & "UAI" & "%'
+) AS DistinctPairs"
+
+        'cmd = New SqlCommand("Select Count(DISTINCT CPrice,SellPrice) from Itr where Qty>0 and Sts=0 and ItemCode='" & xITC & "'and NOT Tno like '%" & "UAI" & "%'", con)
+        'cnt = cmd.ExecuteScalar
+        cmd = New SqlCommand(ssq, con)
         cnt = cmd.ExecuteScalar
         If cnt > 1 Then
             Panel4.Show()
@@ -1684,7 +1667,12 @@ Public Class FrmCash1
                 SaleItem.vals = row.Cells(7).Value.ToString
                 SaleItem.dsc = row.Cells(10).Value.ToString
                 SaleItems.Add(SaleItem)
-                cmf.SaveItemTrans(row.Cells(1).Value.ToString, Val(row.Cells(3).Value.ToString), Val(row.Cells(4).Value.ToString), Val(row.Cells(6).Value.ToString) * -1, Now.Date, INVNum.Text, 0, CusCode.Text)
+                '  If Val(row.Cells(6).Value) > 0 Then
+                cmf.SaveItemTrans(row.Cells(1).Value.ToString, Val(row.Cells(3).Value.ToString), Val(row.Cells(4).Value.ToString) - Val(row.Cells(10).Value.ToString), Val(row.Cells(6).Value.ToString) * -1, Now.Date, INVNum.Text, 0, CusCode.Text)
+                '  ElseIf Val(row.Cells(6).Value) < 0 Then
+                '  cmf.SaveItemTrans(row.Cells(1).Value.ToString, Val(row.Cells(3).Value.ToString), Val(row.Cells(4).Value.ToString), Val(row.Cells(6).Value.ToString) * -1, Now.Date, INVNum.Text, 0, CusCode.Text)
+                ' End If
+
             Next
             items = JsonConvert.SerializeObject(SaleItems)
             cmf.SaveInv(INVNum.Text, Val(NeTot.Text), Val(TenderedAmt.Text), Val(DiscVal.Text), Now.Date, Now.Date.ToShortTimeString, CusCode.Text, items, 0)
@@ -1697,7 +1685,7 @@ Public Class FrmCash1
 
 
             cmf.SaveCusLed(CusCode.Text, Val(NeTot.Text), Val(TenderedAmt.Text), Now.Date, INVNum.Text, 0)
-            cmd = New SqlCommand("Update InvT set Sts=2 where CusCode='" & CusCode.Text & "'and Dte='" & dtpOld.Value.Date & "'", con)
+            cmd = New SqlCommand("Update InvT set Sts=2 where CusCode='" & CusCode.Text & "'", con)
             cmd.ExecuteNonQuery()
             Dim result2 As DialogResult = MessageBox.Show("Want to  Print Invoice.?", "Print Invoice", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
             If result2 = vbYes Then
@@ -1709,7 +1697,7 @@ Public Class FrmCash1
                 '    PrintFooter()
                 '    EndPrint()
                 'End If
-                PrintInvoice(0, PrinterName, INVNum.Text, Now.ToShortDateString & "-" & Now.ToShortTimeString, CusName.Text, Val(NeTot.Text), Val(TenderedAmt.Text), Val(BalAmt.Text))
+                PrintInvoice(0, PrinterName, INVNum.Text, Now.ToShortDateString & "-" & Now.ToShortTimeString, CusCode.Text & " - " & CusName.Text, Val(NeTot.Text), Val(TenderedAmt.Text), Val(BalAmt.Text))
             End If
 
             Panel3.Show()
@@ -2891,19 +2879,17 @@ Public Class FrmCash1
     End Sub
     Private Sub txtCsCode_TextChanged(sender As Object, e As EventArgs) Handles txtCsCode.TextChanged
         If txtCsCode.Text = "" Then
-            cmd = New SqlCommand("select * from Cus_Master order by cast(CusCode as Int)ASC", con)
+            cmd = New SqlCommand("select CCode,CusName from Cst where sts=0", con)
         Else
-            cmd = New SqlCommand("Select * from Cus_Master where CusCode like '" & txtCsCode.Text & "%' ", con)
+            cmd = New SqlCommand("Select CCode,CusName from Cst where sts=0 and CCode like '" & txtCsCode.Text & "%' ", con)
         End If
         rdr = cmd.ExecuteReader
         GRID110.Rows.Clear()
         While rdr.Read
-            If rdr("Active") = 0 Then
-                xACT = False
-            ElseIf rdr("Active") = 1 Then
-                xACT = True
-            End If
-            GRID110.Rows.Add(rdr("CusCode"), rdr("CusName"), Format(rdr("CusBalance"), "0.00"), xACT)
+            Dim cba As Double = 0
+            cmd1 = New SqlCommand("Select ISNULL(Sum(Cr-Dr),0) from Cled where CCode='" & rdr("CCode") & "'and sts=0", con1)
+            cba = cmd1.ExecuteScalar
+            GRID110.Rows.Add(rdr("CCode"), rdr("CusName"), cba)
         End While
         rdr.Close()
     End Sub
@@ -3289,7 +3275,7 @@ Public Class FrmCash1
     Dim itp As String = Nothing
     Private Sub CmbInv_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbInv.SelectedIndexChanged
         Dim itms As New List(Of Sitems)
-        Dim itmss As String
+        Dim itmss As String = Nothing
         Dim netT As Double = 0
         Dim diss As Double = 0
         Dim paid As Double = 0
@@ -3334,7 +3320,13 @@ Public Class FrmCash1
         BalanceAmount.Text = Format(Val(BalanceAmount.Text), "0.00")
     End Sub
     Private Sub CmdPrint_Click(sender As Object, e As EventArgs) Handles CmdPrint.Click
-        PrintInvoice(1, PrinterName, CmbInv.Text, DTP1.Text, "-", Val(CardInt.Text), Val(CashTen.Text), Val(BalanceAmount.Text))
+        Dim cusCode As String = Nothing
+        Dim cusName As String = Nothing
+        cmd = New SqlCommand("Select CusCode from Inv where INVNo='" & CmbInv.Text & "'", con)
+        cusCode = cmd.ExecuteScalar
+        cmd = New SqlCommand("Select CusName from Cst where CCode='" & cusCode & "'", con)
+        cusName = cmd.ExecuteScalar
+        PrintInvoice(1, PrinterName, CmbInv.Text, DTP1.Text, cusCode & " - " & cusName, Val(CardInt.Text), Val(CashTen.Text), Val(BalanceAmount.Text))
     End Sub
     Private Sub CmdPrint_GotFocus(sender As Object, e As EventArgs) Handles CmdPrint.GotFocus
         CmdPrint.BackColor = Color.Yellow
@@ -3346,7 +3338,7 @@ Public Class FrmCash1
         If e.KeyCode = 13 Then
             If GRID2.RowCount = 0 Then Return
             cmd = New SqlCommand("Select * from TempInv_Main where(AutoID='" & GRID2.Item(0, GRID2.CurrentRow.Index).Value & "')", con)
-            rdr = cmd.ExecuteReader
+        rdr = cmd.ExecuteReader
             If rdr.Read = True Then
                 TSnId.Text = rdr("AutoId").ToString
                 Total.Text = rdr("Amnt").ToString
@@ -5013,15 +5005,15 @@ Public Class FrmCash1
     Private Sub dtpOld_ValueChanged(sender As Object, e As EventArgs) Handles dtpOld.ValueChanged
         GRID6.Rows.Clear()
         Try
-            cmd = New SqlCommand("Select * from InvT where (Sts=0 and Dte='" & Format(dtpOld.Value.Date, "yyyy-MM-dd") & "')", con)
-            rdr = cmd.ExecuteReader
+            cmd2 = New SqlCommand("Select * from InvT where (Sts=0 and Dte>='" & Format(dtpOld.Value.Date, "yyyy-MM-dd") & "')", con2)
+            rdr2 = cmd2.ExecuteReader
             GRID2.Rows.Clear()
-            While rdr.Read
-                GRID2.Rows.Add(rdr("AutoID"), rdr("CusCode"), rdr("InvAmnt"), rdr("Disc"), rdr("Paid"), rdr("Itms"))
+            While rdr2.Read
+                GRID2.Rows.Add(rdr2("AutoID"), rdr2("CusCode"), rdr2("InvAmnt"), rdr2("Disc"), rdr2("Paid"), rdr2("Itms"))
             End While
-            rdr.Close()
+            rdr2.Close()
         Catch ex As Exception
-
+            rdr2.Close()
         End Try
 
     End Sub

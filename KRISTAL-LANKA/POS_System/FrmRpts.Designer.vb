@@ -26,6 +26,7 @@ Partial Class FrmRpts
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.LinkLabel37 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel34 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel33 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel21 = New System.Windows.Forms.LinkLabel()
@@ -88,7 +89,6 @@ Partial Class FrmRpts
         Me.txtSupCode = New System.Windows.Forms.TextBox()
         Me.CusCoode = New System.Windows.Forms.TextBox()
         Me.CmdExit = New System.Windows.Forms.Button()
-        Me.LinkLabel37 = New System.Windows.Forms.LinkLabel()
         Me.Panel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -163,6 +163,17 @@ Partial Class FrmRpts
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         '
+        'LinkLabel37
+        '
+        Me.LinkLabel37.AutoSize = True
+        Me.LinkLabel37.Location = New System.Drawing.Point(125, 141)
+        Me.LinkLabel37.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LinkLabel37.Name = "LinkLabel37"
+        Me.LinkLabel37.Size = New System.Drawing.Size(102, 16)
+        Me.LinkLabel37.TabIndex = 170
+        Me.LinkLabel37.TabStop = True
+        Me.LinkLabel37.Text = "Sales - Unitwise"
+        '
         'LinkLabel34
         '
         Me.LinkLabel34.AutoSize = True
@@ -188,7 +199,7 @@ Partial Class FrmRpts
         'LinkLabel21
         '
         Me.LinkLabel21.AutoSize = True
-        Me.LinkLabel21.Location = New System.Drawing.Point(191, 74)
+        Me.LinkLabel21.Location = New System.Drawing.Point(227, 74)
         Me.LinkLabel21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LinkLabel21.Name = "LinkLabel21"
         Me.LinkLabel21.Size = New System.Drawing.Size(33, 16)
@@ -291,15 +302,15 @@ Partial Class FrmRpts
         Me.LinkLabel26.Location = New System.Drawing.Point(7, 74)
         Me.LinkLabel26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LinkLabel26.Name = "LinkLabel26"
-        Me.LinkLabel26.Size = New System.Drawing.Size(59, 16)
+        Me.LinkLabel26.Size = New System.Drawing.Size(102, 16)
         Me.LinkLabel26.TabIndex = 163
         Me.LinkLabel26.TabStop = True
-        Me.LinkLabel26.Text = "Day End"
+        Me.LinkLabel26.Text = "Sales Summery"
         '
         'LinkLabel8
         '
         Me.LinkLabel8.AutoSize = True
-        Me.LinkLabel8.Location = New System.Drawing.Point(81, 74)
+        Me.LinkLabel8.Location = New System.Drawing.Point(115, 74)
         Me.LinkLabel8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LinkLabel8.Name = "LinkLabel8"
         Me.LinkLabel8.Size = New System.Drawing.Size(95, 16)
@@ -874,17 +885,6 @@ Partial Class FrmRpts
         Me.CmdExit.Text = "Exit"
         Me.CmdExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.CmdExit.UseVisualStyleBackColor = False
-        '
-        'LinkLabel37
-        '
-        Me.LinkLabel37.AutoSize = True
-        Me.LinkLabel37.Location = New System.Drawing.Point(125, 141)
-        Me.LinkLabel37.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LinkLabel37.Name = "LinkLabel37"
-        Me.LinkLabel37.Size = New System.Drawing.Size(102, 16)
-        Me.LinkLabel37.TabIndex = 170
-        Me.LinkLabel37.TabStop = True
-        Me.LinkLabel37.Text = "Sales - Unitwise"
         '
         'FrmRpts
         '
