@@ -2,7 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
-    <PublishUrlHistory>C:\Users\lenovo\Desktop\Edi5.4\|C:\Users\lenovo\Desktop\Edi5.3\|C:\Users\lenovo\Desktop\Edi5.2\|C:\Users\lenovo\Desktop\Edi5.1\|C:\Users\lenovo\Desktop\Edi5.0\</PublishUrlHistory>
+    <PublishUrlHistory>C:\Users\lenovo\Desktop\Edi5.5\|C:\Users\lenovo\Desktop\Edi5.4\|C:\Users\lenovo\Desktop\Edi5.3\|C:\Users\lenovo\Desktop\Edi5.2\|C:\Users\lenovo\Desktop\Edi5.1\</PublishUrlHistory>
     <InstallUrlHistory />
     <SupportUrlHistory />
     <UpdateUrlHistory>\\192.168.1.101\Users\KRISTAL LANKA\Desktop\Update\</UpdateUrlHistory>

@@ -315,6 +315,8 @@ Partial Class FrmCash1
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.txtTemp = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.gridItmList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridHistory, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -2550,11 +2552,13 @@ Partial Class FrmCash1
         '
         Me.Panel2.BackColor = System.Drawing.Color.Tan
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.txtTemp)
+        Me.Panel2.Controls.Add(Me.Button5)
         Me.Panel2.Controls.Add(Me.Button4)
         Me.Panel2.Controls.Add(Me.dtpOld)
         Me.Panel2.Controls.Add(Me.GRID6)
         Me.Panel2.Controls.Add(Me.GRID2)
-        Me.Panel2.Location = New System.Drawing.Point(1255, 324)
+        Me.Panel2.Location = New System.Drawing.Point(614, 7)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(939, 362)
@@ -3534,6 +3538,35 @@ Partial Class FrmCash1
         Me.Label9.Text = "Close"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.White
+        Me.Button5.Location = New System.Drawing.Point(205, 323)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(186, 30)
+        Me.Button5.TabIndex = 193
+        Me.Button5.Text = "Done Posted"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'txtTemp
+        '
+        Me.txtTemp.BackColor = System.Drawing.Color.White
+        Me.txtTemp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTemp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTemp.Location = New System.Drawing.Point(395, 328)
+        Me.txtTemp.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtTemp.Name = "txtTemp"
+        Me.txtTemp.ReadOnly = True
+        Me.txtTemp.Size = New System.Drawing.Size(182, 23)
+        Me.txtTemp.TabIndex = 190
+        Me.txtTemp.TabStop = False
+        Me.txtTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'FrmCash1
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
@@ -3588,6 +3621,7 @@ Partial Class FrmCash1
         Me.Panel4.ResumeLayout(False)
         CType(Me.GRID4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         CType(Me.GRID6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GRID2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
@@ -3850,4 +3884,6 @@ Partial Class FrmCash1
     Friend WithEvents Column17 As DataGridViewTextBoxColumn
     Friend WithEvents Column29 As DataGridViewTextBoxColumn
     Friend WithEvents btnPay As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents txtTemp As TextBox
 End Class

@@ -2135,6 +2135,7 @@ FROM (
     Private Sub GRID2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles GRID2.CellContentClick
         Dim iit As List(Of Sitems)
         Dim df As String = GRID2.Item(5, GRID2.CurrentRow.Index).Value.ToString
+        txtTemp.Text = GRID2.Item(1, GRID2.CurrentRow.Index).Value.ToString
         GRID6.Rows.Clear()
         Try
             iit = JsonConvert.DeserializeObject(Of List(Of Sitems))(df)
@@ -5033,6 +5034,19 @@ FROM (
             CusCode.Clear()
             TenderedAmt.Clear()
             ItemCode.Focus()
+        End If
+    End Sub
+
+    Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
+        If txtTemp.Text = "" Then Return
+        Dim result11 As DialogResult = MessageBox.Show("Do You want to Done Post ?", "Post Hold Invoice", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+        If result11 = vbYes Then
+            cmd = New SqlCommand("Update InvT set Sts=2 where CusCode='" & txtTemp.Text & "'", con)
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Success..!", "Post Hold Invoice", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            txtTemp.Clear()
+            dtpOld_ValueChanged(sender, EventArgs.Empty)
+
         End If
     End Sub
 
