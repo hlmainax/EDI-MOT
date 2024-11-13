@@ -2056,7 +2056,7 @@ FROM (
     Dim ItemPriceS As Double = 0
     Private Sub HOLDSALE()
         If CusCode.Text = "" Or GRID1.RowCount = 0 Then Return
-        cmd = New SqlCommand("Update InvT set Sts=1 where CusCode='" & CusCode.Text & "'and Dte='" & dtpOld.Value.Date & "'", con)
+        cmd = New SqlCommand("Update InvT set Sts=1 where CusCode='" & CusCode.Text & "'", con)
         cmd.ExecuteNonQuery()
         Dim cmf As New CommonFunc
         Dim items As String
@@ -2098,7 +2098,7 @@ FROM (
     Private Sub RECALLSALE()
         GRID6.Rows.Clear()
         Try
-            cmd = New SqlCommand("Select * from InvT where (Sts=0 and Dte='" & Format(dtpOld.Value.Date, "yyyy-MM-dd") & "')", con)
+            cmd = New SqlCommand("Select * from InvT where Sts=0", con)
             rdr = cmd.ExecuteReader
             GRID2.Rows.Clear()
             While rdr.Read
